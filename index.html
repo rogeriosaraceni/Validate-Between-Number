@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Limit min/max value for input</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+   </head>
+
+   <body class="p-4">
+      <h3>Limit min/max value for input</h3>
+      
+      <div class="mb-3" style="max-width: 300px;">
+         <label for="num" class="form-label">Enter a number between 7 and 20</label>
+         <input type="text" id="num" class="form-control" onblur="validateBetweenNumber();"/>
+         <small id="msgBetweenNumber" class="text-danger"></small>
+      </div>
+      
+      <script src="script.js"></script>
+   </body>
+</html>
