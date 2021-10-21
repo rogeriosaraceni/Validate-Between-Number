@@ -1,19 +1,14 @@
 validateBetweenNumber = () => {
    const min = 7;
    const max = 20;
-   
-   const input = document.getElementById('num');
+   const input = document.querySelector('.inputNumber');
    let n = input.value;
 
    n = Number(n);
 
-   if (n < min) {
+   if (n < min || n > max) {
       text = "Value has to be between 7 and 20";
-      input.value = min;
-   } 
-   else if (n > max) {
-      text = "Value has to be between 7 and 20";
-      input.value = max;
+      input.value = "";
    } 
    else {
       text = "";
@@ -22,5 +17,5 @@ validateBetweenNumber = () => {
 
    console.log(n);
 
-   document.getElementById("msgBetweenNumber").innerHTML = text;
+   document.querySelector("#msgBetweenNumber").innerHTML = text;
 }

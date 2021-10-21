@@ -4,17 +4,34 @@
       <title>Limit min/max value for input</title>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
    </head>
 
    <body class="p-4">
-      <h3>Limit min/max value for input</h3>
+      <h3>Limit min/max value for input - JavaScript</h3>
       
-      <div class="mb-3" style="max-width: 300px;">
-         <label for="num" class="form-label">Enter a number between 7 and 20</label>
-         <input type="text" id="num" class="form-control" onblur="validateBetweenNumber();"/>
-         <small id="msgBetweenNumber" class="text-danger"></small>
-      </div>
-      
+      <form class="mb-4">
+         <div class="mb-3" style="max-width: 300px;">
+            <input type="text" placeholder="between 7 and 20" class="inputNumber form-control" required min="7" max="20" onchange="validateBetweenNumber();"/>
+            <small id="msgBetweenNumber" class="text-danger"></small>
+         </div> 
+
+         <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+
+
+      <h3>Limit min/max value for input - HTML5</h3>
+
+      <form class="mb-4">
+         <div class="mb-3 content-inputNumber" style="max-width: 200px;">
+            <input type="number" placeholder="between 7 and 20" class="form-control" min="7" max="20" required/>
+         </div> 
+
+         <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+
       <script src="script.js"></script>
    </body>
 </html>
+
+

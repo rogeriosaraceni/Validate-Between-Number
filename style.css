@@ -1,0 +1,22 @@
+.content-inputNumber{ position: relative;}
+.content-inputNumber::before {
+   content: '%';
+   position: absolute;
+   right: 10px;
+   bottom: 8px;
+}      
+
+/* for Mozilla */
+.content-inputNumber input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+   margin: 0; 
+}
+/* for Chrome */
+.content-inputNumber input[type=number]::-webkit-inner-spin-button, 
+.content-inputNumber input[type=number]::-webkit-outer-spin-button { 
+   -webkit-appearance: none; 
+   margin: 0; 
+}
+
+.content-inputNumber .form-control{ padding-right: 30px;}
